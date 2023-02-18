@@ -1,12 +1,12 @@
-import "./game.css";
+import "./profile.css";
 
-function Game() {
+function Profile() {
   return (
     <>
-      <div id="generalGamePerson">
+      <div id="generalProfilePerson">
         <div id="headerPerson">
           <div id="linkPerson">
-            <a href="">novo jogo</a>
+            <a href="">novo perfil</a>
             <a href="/">pagina inicial</a>
           </div>
           <div id="pesquisaPerson">
@@ -15,9 +15,9 @@ function Game() {
           </div>
         </div>
 
-        <div id="gamesPerson"></div>
+        <div id="profilePerson"></div>
       </div>
     </>
   );
 }
-export default Game;
+export default Profile;
