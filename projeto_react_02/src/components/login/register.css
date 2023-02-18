@@ -1,0 +1,80 @@
+#generalPerson{height: 100vh;
+    background-image: url('../img/theWitcher.jpg');}
+
+#registerPerson{
+    padding-top:10vh ;
+    background-size: cover;
+    display: grid;
+    justify-items: stretch;
+    justify-content: center;
+grid-template-columns: auto auto;}
+
+#registerPerson> input{
+    border: none;
+    outline: none;
+    border-radius: 0px 10px 10px 0px;
+    opacity: .7;
+    padding: 15px 5px 15px 5px;
+    width: 407.333px;
+margin-left: 2px;
+margin-bottom: 10px;}#generalPerson{
+    height: 100vh;
+     background-image: url('../img/theWitcher.jpg');
+}
+ #registerPerson{
+     padding-top:10vh ;
+     background-size: cover;
+     display: grid;
+     justify-items: stretch;
+     justify-content: center;
+     grid-template-columns: auto auto;
+}
+ #registerPerson> input{
+     border: none;
+     outline: none;
+     border-radius: 0px 10px 10px 0px;
+     opacity: .7;
+     padding: 15px 5px 15px 5px;
+     width: 407.333px;
+     margin-left: 2px;
+     margin-bottom: 10px;
+}
+ #registerPerson> button {
+    align-self: center;
+}
+ #registerPerson> label{
+     border-radius: 10px 0px 0px 10px;
+     display: grid;
+     align-items: center;
+     height: 49px;
+    background-color: white;
+     opacity: .7;
+}
+ #generalPerson> button {
+    padding: 10px 100px;
+     opacity: .7;
+     transition: opacity .5s;
+     transition-timing-function: ease-in;
+}
+ #generalPerson> button:hover{
+    opacity: 1;
+     cursor: pointer;
+}
+
+#registerPerson> button {align-self: center;}
+#registerPerson> label{
+    border-radius: 10px 0px 0px 10px;
+    display: grid;
+    align-items: center;
+    height: 49px;background-color: white;
+opacity: .7;}
+
+#generalPerson> button {padding: 10px 100px;
+    opacity: .7;
+
+transition: opacity .5s;
+transition-timing-function: ease-in;}
+
+    #generalPerson> button:hover{opacity: 1;
+    cursor: pointer;
+    }

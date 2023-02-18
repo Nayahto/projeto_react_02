@@ -2,10 +2,10 @@
     margin: 15% auto;
     justify-content: center;
     display: grid;
-    grid-template-columns: auto auto;}
-
-#formPerson
-{   background-image: url('../img/redDead.jpg');
+    grid-template-columns: auto auto;
+}
+#formPerson {
+    background-image: url('../img/redDead.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0 10px 10px 0;
@@ -19,31 +19,30 @@
 #paragrafoPerson{
     width: 400px;
     background-color: blueviolet;
-border-radius: 10px 0 0 10px;}
-
-#paragrafoPerson> h2{margin: 0 10px;}
+    border-radius: 10px 0 0 10px;
+}
+#paragrafoPerson> h2{
+   margin: 0 10px;
+}
 #paragrafoPerson >h1{
     padding: 0 0 10px 0;
-    border-bottom: 1px solid black;}
-
-#formPerson>button
-{
-    padding: 5px;
-    margin-top: 10px;}
-
-    #formPerson> form > button:hover{cursor: pointer;
+    border-bottom: 1px solid black;
 }
-#formPerson>input
-{margin-top:2px ;
+#formPerson>button {
+    padding: 5px;
+    margin-top: 10px;
+}
+#formPerson> form > button:hover{
+   cursor: pointer;
+}
+#formPerson>input {
+   margin-top:2px ;
     border: none;
     outline: none;
     border-radius: 5px;
     opacity: 0.8;
     padding: 5px;
 }
-
 #formPerson>button, input{
     padding: 5px 100px;
 }
-    
-
