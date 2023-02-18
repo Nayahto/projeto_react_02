@@ -1,0 +1,49 @@
+#generalPerson
+{
+    height: 100vh;
+    background-image: url('../img/cosmic.jpg');
+    background-size: cover;
+}
+
+#headerPerson
+{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-content: center;
+}
+
+#linkPerson > a 
+{
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 1.5px 5px 4.5px 5px;
+    background-color: rgba(0, 0, 0, 0.418);
+    margin: 5px 5px;
+}
+
+    #pesquisaPerson > input::placeholder
+{
+    
+    margin-left: 10px;
+    font-size: 15px;  
+}
+#pesquisaPerson > input 
+{
+    border: 1px solid black;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    width: 300px;
+    height: 26px;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+#pesquisaPerson > button
+{
+    border: 1px solid black;
+    margin-left: 2px;
+    border-radius: 0px 10px 10px 0px;
+    padding: 3.5px  0px 4.5px 0
+}
