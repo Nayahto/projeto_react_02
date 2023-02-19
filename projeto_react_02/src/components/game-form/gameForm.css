@@ -1,0 +1,60 @@
+#gameFormPerson
+{
+    background-size: cover;
+    height: 100vh;
+    background-image: url('../img/farCry4.jpg');
+}
+#labelInputPerson
+{
+    padding-top: 145px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#labelInputPerson> input
+{
+    font-size: 17px;
+    display: grid;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.650) ;
+    margin-bottom: 3px;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    width: 407.333px;
+    height: 24px;
+    padding: 12px 5px 12px 5px ;
+    border:none ;
+}
+
+#labelInputPerson> label
+{
+    font-size: 17px;
+    display: grid;
+    align-content: center;
+    padding: 12px 5px 12px 5px ;
+    border:none ;
+    background-color: rgba(255, 255, 255, 0.650);
+    height: 24px;
+    margin-right: 2px;
+    border-radius: 10px 0 0 10px;
+}
+#buttonFormPerson> button
+{
+    margin-top: 10px;
+    transition: opacity .5s;
+    transition-timing-function: ease-in;
+    opacity: .650;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px 100px;
+    font-size: 17px;
+    border: none;
+
+}
+#buttonFormPerson> button:hover 
+{
+    opacity: 1;
+    cursor: pointer;
+}
+

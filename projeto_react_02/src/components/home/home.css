@@ -4,7 +4,7 @@
 
 #generalUserPerson
 {   
-    background-image: url('../img/purple.jpg');
+    background-image: url('../img/cosmic.jpg');
     background-size: cover;
     height: 100vh;
 }
@@ -44,7 +44,7 @@
 #linkPersonGame
 {   
     width: 320px;
-    background-image:url('../img/redDead2.jpg') ;
+    background-image:url('../img/redDead.jpg') ;
     background-size: cover;
     display: grid;
     align-content: center;

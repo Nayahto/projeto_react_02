@@ -1,11 +1,11 @@
-#generalPerson{
+#generalLoginPerson{
     margin: 15% auto;
     justify-content: center;
     display: grid;
     grid-template-columns: auto auto;
 }
 #formPerson {
-    background-image: url('../img/redDead.jpg');
+    background-image: url('../img/redDead2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0 10px 10px 0;
@@ -28,11 +28,27 @@
     padding: 0 0 10px 0;
     border-bottom: 1px solid black;
 }
-#formPerson>button {
-    padding: 5px;
-    margin-top: 10px;
+#buttonPerson
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
 }
-#formPerson> form > button:hover{
+
+#buttonPerson>button {
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px 2px;
+    padding: 5px 0;
+    width: 207px;
+    opacity: .9;
+    transition: opacity .5s;
+    transition-timing-function: ease-in;
+}
+#buttonPerson> button:hover{
+    opacity: 1;
    cursor: pointer;
 }
 #formPerson>input {
@@ -43,6 +59,8 @@
     opacity: 0.8;
     padding: 5px;
 }
-#formPerson>button, input{
-    padding: 5px 100px;
+#formPerson>input{
+    font-size: 17px;
+    padding: 10px 10px;
+    width:400px;
 }

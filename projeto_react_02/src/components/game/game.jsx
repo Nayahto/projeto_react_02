@@ -6,7 +6,7 @@ function Game() {
       <div id="generalGamePerson">
         <div id="headerPerson">
           <div id="linkPerson">
-            <a href="">novo jogo</a>
+            <a href="game/new">novo jogo</a>
             <a href="/">pagina inicial</a>
           </div>
           <div id="pesquisaPerson">
