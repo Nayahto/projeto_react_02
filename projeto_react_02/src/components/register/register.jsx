@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { handleSubmit } from "../../functions/axiosFunc";
+import { reqPost } from "../../functions/axiosFunc";
 import "./register.css";
 
 function Register() {
@@ -70,7 +70,7 @@ function Register() {
         </div>
         <button
           onClick={() => {
-            handleSubmit(url, postBody, navFunc());
+            reqPost(url, postBody, navFunc());
           }}
         >
           cadastrar

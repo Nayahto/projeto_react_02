@@ -1,6 +1,6 @@
 import axios from "axios";
 
-function handleSubmit(url, data, nav) {
+function reqPost(url, data, nav) {
   axios
     .post(url, data)
     .then((response) => console.log(response))
@@ -8,4 +8,4 @@ function handleSubmit(url, data, nav) {
   nav;
 }
 
-export { handleSubmit };
+export { reqPost };
