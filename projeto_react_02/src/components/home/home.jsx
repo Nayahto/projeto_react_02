@@ -3,6 +3,7 @@ import gameGenre from "../img/gameGenre.png";
 import games from "../img/games.png";
 import profile from "../img/profile.png";
 import user from "../img/user.png";
+
 function Home() {
   return (
     <>

@@ -6,7 +6,7 @@ function Profile() {
       <div id="generalProfilePerson">
         <div id="headerPerson">
           <div id="linkPerson">
-            <a href="">novo perfil</a>
+            <a href="/profile/new">novo perfil</a>
             <a href="/">pagina inicial</a>
           </div>
           <div id="pesquisaPerson">
