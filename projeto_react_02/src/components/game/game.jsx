@@ -1,6 +1,8 @@
 import "./game.css";
+import { reqGet } from "../../functions/axiosFunc";
 
 function Game() {
+  reqGet("http://localhost:3002/game");
   return (
     <>
       <div id="generalGamePerson">
@@ -13,6 +15,7 @@ function Game() {
             <input type="text" placeholder="pesquisar" />
             <button>pesquisar</button>
           </div>
+          <div></div>
         </div>
 
         <div id="gamesPerson"></div>
