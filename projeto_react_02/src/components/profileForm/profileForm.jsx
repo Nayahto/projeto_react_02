@@ -10,7 +10,7 @@ export default function ProfileForm() {
   const url = "http://localhost:3002/profile";
   const nav = useNavigate();
   const navFunc = () => {
-    return nav("/login");
+    return nav("/profile");
   };
 
   return (

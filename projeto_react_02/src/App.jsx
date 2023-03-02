@@ -7,6 +7,9 @@ import Login from "./components/login/login";
 import Register from "./components/register/register";
 import GameForm from "./components/game-form/gameFrom";
 import ProfileForm from "./components/profileForm/profileForm.jsx";
+import GameDetails from "./components/game/gameDetails";
+import GameFormEdit from "./components/game-form/gameFormEdit";
+import User from "./components/user/user";
 
 function App() {
   return (
@@ -21,7 +24,10 @@ function App() {
           <Route path={"/login"} element={<Login />}></Route>
           <Route path={"/register"} element={<Register />}></Route>
           <Route path={"/game/new"} element={<GameForm />}></Route>
+          <Route path={"/game/:id"} element={<GameDetails />}></Route>
           <Route path={"/profile/new"} element={<ProfileForm />}></Route>
+          <Route path={"/edit/:id"} element={<GameFormEdit />}></Route>
+          <Route path={"/user"} element={<User />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,30 +1,44 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 function reqPost(url, data, nav) {
   axios
     .post(url, data)
     .then((response) => console.log(response))
-    .catch((error) => error);
+    .catch((error) => console.log(error));
   nav;
 }
 
-function reqGet(url) {
-  const [dataBody, setDataBody] = useState([]);
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((response) => {
-        const responseSjon = JSON.stringify(response.data);
-        setDataBody(responseSjon);
-        console.log(dataBody);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }),
-    [];
-  return [dataBody];
+function reqGet(url, setData) {
+  axios
+    .get(url)
+    .then((response) => {
+      const responseJson = response;
+      return setData(responseJson.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function reqPatch(url, sendData) {
+  axios
+    .patch(url, sendData)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
-export { reqPost, reqGet };
+function reqDelete(url) {
+  axios
+    .delete(url)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+export { reqPost, reqGet, reqPatch, reqDelete };
