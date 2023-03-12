@@ -2,7 +2,7 @@
 {
     background-size: cover;
     height: 100vh;
-    background-image: url('../img/farCry4.jpg');
+    background-image: url('../../img/farCry4.jpg');
 }
 #labelInputPerson
 {
@@ -41,6 +41,7 @@
 }
 #buttonFormPerson> button
 {
+    margin-right: 10px;
     margin-top: 10px;
     transition: opacity .5s;
     transition-timing-function: ease-in;

@@ -1,16 +1,17 @@
+import "./userEdit.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { reqPost } from "../../functions/axiosFunc";
-import "./register.css";
+import { useNavigate, useParams } from "react-router-dom";
+import { reqDelete, reqPatch } from "../../../functions/axiosFunc";
 
-function Register() {
+export default function userEdit() {
+  const { id } = useParams();
   const [CPF, setCPF] = useState("");
   const [Password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   const postBody = { CPF, Password, userName, email, role };
-  const url = "http://localhost:3002/users";
+  const url = "http://localhost:3001/user" + id;
   const nav = useNavigate();
   const navFunc = () => {
     return nav("/login");
@@ -70,14 +71,19 @@ function Register() {
         </div>
         <button
           onClick={() => {
-            reqPost(url, postBody, navFunc());
+            reqPatch(url, postBody, navFunc());
           }}
         >
-          cadastrar
+          Enviar
+        </button>
+        <button
+          onClick={() => {
+            reqDelete(url, navFunc());
+          }}
+        >
+          Apagar
         </button>
       </div>
     </>
   );
 }
-
-export default Register;

@@ -1,7 +1,7 @@
 import "./profileForm.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { reqPost } from "../../functions/axiosFunc";
+import { reqPost } from "../../../functions/axiosFunc";
 
 export default function ProfileForm() {
   const [Title, setTitle] = useState("");

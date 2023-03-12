@@ -2,7 +2,7 @@
 { 
     height: 100vh;
     background-size: cover;
-    background-image:url('../img//ACOrigins.jpg');
+    background-image:url('../../img//ACOrigins.jpg');
 }
 
 #profileFieldsPerson
@@ -48,15 +48,19 @@
     display: grid;
 }
 #buttonProfilePerson > button
-{    
-    opacity: .650;
+{    margin-top: 10px;
+    opacity: .700;
     transition: opacity .5s;
     transition-timing-function: ease-in;
     width: 300px;
+    padding: 5px 0;
+    border: none;
+    background-color: white;
+    border-radius: 7px;
 
 }
 
-#buttonProfilePerson>button :hover
+#buttonProfilePerson >button:hover
 {
     opacity: 1;
     cursor: pointer;

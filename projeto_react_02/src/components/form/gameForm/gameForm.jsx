@@ -1,9 +1,9 @@
 import "./gameForm.css";
-import { reqPatch, reqGet } from "../../functions/axiosFunc";
-import { useNavigate, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { reqPost } from "../../../functions/axiosFunc";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export default function GameFormEdit() {
+export default function GameForm() {
   const [Title, setTitle] = useState("");
   const [CoverImageUrl, setCoverImageUrl] = useState("");
   const [Description, setDescription] = useState("");
@@ -22,23 +22,11 @@ export default function GameFormEdit() {
     TrailerYouTubeUrl,
     GameplayYouTubeUrl,
   };
-  const [resData, setResData] = useState([]);
-  const { id } = useParams();
-  const url = "http://localhost:3002/game/" + id;
-
-  useEffect(() => {
-    reqGet(url, setResData);
-  }, []);
-
+  const url = "http://localhost:3001/game";
   const nav = useNavigate();
   const navFunc = () => {
     return nav("/game");
   };
-
-  const { title, seValuetTitle } = useState(resData);
-
-  console.log(seValuetTitle);
-
   return (
     <>
       <div id="gameFormPerson">
@@ -103,10 +91,10 @@ export default function GameFormEdit() {
         <div id="buttonFormPerson">
           <button
             onClick={() => {
-              reqPatch(url, postBody, navFunc());
+              reqPost(url, postBody, navFunc());
             }}
           >
-            Salvar
+            Cadastrar jogo
           </button>
         </div>
       </div>

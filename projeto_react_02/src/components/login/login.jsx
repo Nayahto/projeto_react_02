@@ -1,17 +1,13 @@
 import "./login.css";
-import { reqPost } from "../../functions/axiosFunc";
-import { useNavigate } from "react-router-dom";
+import { reqPostAuth } from "../../functions/axiosFunc";
 import { useState } from "react";
 
 function Login() {
   const [userCPF, setUserCPF] = useState("");
   const [passWord, setPassword] = useState("");
   const postBody = { userCPF, passWord };
-  const url = "http://localhost:3002/auth";
-  const nav = useNavigate();
-  const navFunc = () => {
-    return nav("/login");
-  };
+  const url = "http://localhost:3001/auth";
+
   return (
     <>
       <div id="generalLoginPerson">
@@ -38,14 +34,14 @@ function Login() {
           <div id="buttonPerson">
             <button
               onClick={() => {
-                reqPost(url, postBody, navFunc());
+                reqPostAuth(url, postBody);
               }}
             >
               Entrar
             </button>
 
             <button>
-              <a href="/register">Cadastrar</a>
+              <a href="/user/form/">Cadastrar</a>
             </button>
           </div>
         </div>

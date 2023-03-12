@@ -3,7 +3,7 @@ import axios from "axios";
 function reqPost(url, data, nav) {
   axios
     .post(url, data)
-    .then((response) => console.log(response))
+    .then((response) => console.log(response.data))
     .catch((error) => console.log(error));
   nav;
 }
@@ -40,5 +40,14 @@ function reqDelete(url) {
       console.log(error);
     });
 }
+function reqPostAuth(url, data) {
+  axios
+    .post(url, data)
+    .then((response) => {
+      const idRes = response.data.user.id;
+      console.log(idRes);
+    })
+    .catch((error) => console.log(error));
+}
 
-export { reqPost, reqGet, reqPatch, reqDelete };
+export { reqPost, reqGet, reqPatch, reqDelete, reqPostAuth };

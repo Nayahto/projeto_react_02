@@ -1,18 +1,11 @@
-import "./game.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { reqGet, reqDelete, reqPatch } from "../../functions/axiosFunc";
-import { useNavigate } from "react-router-dom";
+import { reqGet } from "../../functions/axiosFunc";
 
 function GameDetails() {
   const { id } = useParams();
-  const url = "http://localhost:3002/game/" + id;
+  const url = "http://localhost:3001/game/" + id;
   const [resData, setResData] = useState([]);
-
-  const nav = useNavigate();
-  const navFunc = () => {
-    return nav("/game");
-  };
 
   useEffect(() => {
     reqGet(url, setResData);
@@ -21,7 +14,9 @@ function GameDetails() {
   return (
     <>
       <div id="bodyGameDetailsPerson">
-        <a href="/game">home</a>
+        <a id="bodyGameDetailsAnchor" href="/game">
+          home
+        </a>
         <div id="bodyGameDetails">
           <div id="bodyGameDetailsImg">
             <img src={resData.CoverImageUrl} alt="" />
@@ -37,15 +32,8 @@ function GameDetails() {
             <a target="blank" href={resData.TrailerYouTubeUrl}>
               Trailer
             </a>
-            <button
-              onClick={() => {
-                reqDelete(url, navFunc());
-              }}
-            >
-              Apagar
-            </button>
             <button>
-              <a href={"/edit/" + resData.id}>Editar</a>
+              <a href={"/game/edit/" + resData.id}>Editar</a>
             </button>
           </div>
         </div>

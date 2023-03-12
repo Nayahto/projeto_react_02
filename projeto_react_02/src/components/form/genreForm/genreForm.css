@@ -1,0 +1,80 @@
+#backgroundPerson
+{
+    background-image: url("../../img//cyberpunk_2077.jpg");
+    background-size: cover;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+#genreGeneralPerson
+{
+    padding: 100px;
+    margin: 0 auto;
+    width: 400px;
+}
+
+#genrePerson > label
+{
+    font-weight: 600;
+    margin-left: -44px;
+    width: 100px;
+    margin-right: 2px;
+    font-size: 15px;
+    padding: 10px 5px;
+    border: none;
+    opacity: .8;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+}
+#genrePerson > input
+{
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 15px;
+    padding: 10px 0;
+    width: 250px;
+    opacity: .8;
+    background-color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+#boxPerson
+{
+    font-weight: 530;
+    padding: 5px 0;
+    opacity: .8;
+    background-color: white;
+    text-align: start;
+    margin-left: 25px;
+    width: 80%;
+    border-radius:10px ;
+
+    margin-top: 10px;
+}
+#genreGeneralPerson > button
+{
+    background-color: white;
+    opacity: .5;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    transition: .8s;
+    animation-timing-function: ease-in-out;
+}
+#genreGeneralPerson > button:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+#labelPerson
+{
+    opacity: .8;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 550;
+    background-color: white;
+    text-align: start;
+}

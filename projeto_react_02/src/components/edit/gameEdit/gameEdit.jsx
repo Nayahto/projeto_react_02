@@ -1,9 +1,12 @@
-import "./gameForm.css";
-import { reqPost } from "../../functions/axiosFunc";
-import { useNavigate } from "react-router-dom";
+import "./gameEdit.css";
+import { reqPatch, reqDelete } from "../../../functions/axiosFunc";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 
-export default function GameForm() {
+export default function GameEdit() {
+  const { id } = useParams();
+  const url = "http://localhost:3001/game/" + id;
+
   const [Title, setTitle] = useState("");
   const [CoverImageUrl, setCoverImageUrl] = useState("");
   const [Description, setDescription] = useState("");
@@ -13,6 +16,7 @@ export default function GameForm() {
   const ImdbScore = parseFloat(convImdbScore);
   const [TrailerYouTubeUrl, setTrailerYouTubeUrl] = useState("");
   const [GameplayYouTubeUrl, setGameplayYouTubeUrl] = useState("");
+
   const postBody = {
     Title,
     CoverImageUrl,
@@ -22,7 +26,7 @@ export default function GameForm() {
     TrailerYouTubeUrl,
     GameplayYouTubeUrl,
   };
-  const url = "http://localhost:3002/game";
+
   const nav = useNavigate();
   const navFunc = () => {
     return nav("/game");
@@ -39,7 +43,7 @@ export default function GameForm() {
             placeholder="insira o titulo"
             type="text"
           />
-          <label htmlFor="">capa</label>
+          <label htmlFor="">Capa</label>
           <input
             onChange={(e) => {
               setCoverImageUrl(e.target.value);
@@ -47,7 +51,7 @@ export default function GameForm() {
             placeholder="insira a capa"
             type="text"
           />
-          <label htmlFor="">descricao</label>
+          <label htmlFor="">Descricao</label>
           <input
             onChange={(e) => {
               setDescription(e.target.value);
@@ -55,7 +59,7 @@ export default function GameForm() {
             placeholder="insira a descricao"
             type="text"
           />
-          <label htmlFor="">ano</label>
+          <label htmlFor="">Ano</label>
           <input
             onChange={(e) => {
               setYear(e.target.value);
@@ -71,7 +75,7 @@ export default function GameForm() {
             placeholder="insira uma pontuacao de 0 até 5"
             type="text"
           />
-          <label htmlFor="">trailer</label>
+          <label htmlFor="">Trailer</label>
           <input
             onChange={(e) => {
               setTrailerYouTubeUrl(e.target.value);
@@ -79,7 +83,7 @@ export default function GameForm() {
             placeholder="insira o link do trailer"
             type="text"
           />
-          <label htmlFor="">gameplay</label>
+          <label htmlFor="">Gameplay</label>
           <input
             onChange={(e) => {
               setGameplayYouTubeUrl(e.target.value);
@@ -91,10 +95,17 @@ export default function GameForm() {
         <div id="buttonFormPerson">
           <button
             onClick={() => {
-              reqPost(url, postBody, navFunc());
+              reqPatch(url, postBody, navFunc());
             }}
           >
-            Cadastrar jogo
+            Enviar
+          </button>
+          <button
+            onClick={() => {
+              reqDelete(url, navFunc());
+            }}
+          >
+            apagar
           </button>
         </div>
       </div>

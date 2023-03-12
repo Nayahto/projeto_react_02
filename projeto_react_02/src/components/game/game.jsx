@@ -4,7 +4,7 @@ import { reqGet } from "../../functions/axiosFunc";
 
 function Game() {
   const [resData, setResData] = useState([]);
-  const url = "http://localhost:3002/game";
+  const url = "http://localhost:3001/game";
 
   useEffect(() => {
     reqGet(url, setResData);
@@ -16,8 +16,9 @@ function Game() {
       <div id="generalGamePerson">
         <div id="headerPerson">
           <div id="linkPerson">
-            <a href="game/new">novo jogo</a>
-            <a href="/">pagina inicial</a>
+            <a href="/profile/edit/id">editar perfil</a>
+            <a href="game/form">novo jogo</a>
+            <a href="/user">pagina inicial</a>
           </div>
           <div id="pesquisaPerson">
             <input type="text" placeholder="pesquisar" />
@@ -35,7 +36,7 @@ function Game() {
                 <p>IMDb: {resDataArg.ImdbScore}</p>
                 <p>Ano: {resDataArg.Year}</p>
                 <button>
-                  <a href={"/game/" + resDataArg.id}>ver mais</a>
+                  <a href={"/game/details/" + resDataArg.id}>ver mais</a>
                 </button>
               </div>
             );
