@@ -16,7 +16,7 @@ export default function ProfileEdit() {
 
     /*--------------------------------------------------------------------------------------------------------- */
   };
-
+  console.log(url);
   return (
     <>
       <div id="ProfilegeneralPerson">

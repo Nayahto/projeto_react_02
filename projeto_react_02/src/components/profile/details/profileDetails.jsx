@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { reqGet } from "../../functions/axiosFunc";
+import { reqGet } from "../../../functions/axiosFunc";
 
-function GameDetails() {
+export default function ProfileDetails() {
   const [cadastrado, setCadastrado] = useState(false);
   const [pendente, setPendente] = useState(true);
   const [erro, setErro] = useState(false);
@@ -20,6 +20,21 @@ function GameDetails() {
         <a id="bodyGameDetailsAnchor" href="/game">
           home
         </a>
+        {pendente && (
+          <div>
+            <h2>carregando...</h2>
+          </div>
+        )}
+        {erro && (
+          <div>
+            <h2>erro na consulta</h2>
+          </div>
+        )}
+        {cadastrado && (
+          <div>
+            <h2>jogo nao cadastrado</h2>
+          </div>
+        )}
         <div id="bodyGameDetails">
           <div id="bodyGameDetailsImg">
             <img src={resData.CoverImageUrl} alt="" />
@@ -35,14 +50,9 @@ function GameDetails() {
             <a target="blank" href={resData.TrailerYouTubeUrl}>
               Trailer
             </a>
-            <button>
-              <a href={"/game/edit/" + resData.id}>Editar</a>
-            </button>
           </div>
         </div>
       </div>
     </>
   );
 }
-
-export default GameDetails;

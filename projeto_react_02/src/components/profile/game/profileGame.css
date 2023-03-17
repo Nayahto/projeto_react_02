@@ -1,7 +1,7 @@
 #generalGamePerson
 {
     height: 100vh;
-    background-image: url('../img/cosmic.jpg');
+    background-image: url('../../img/cosmic.jpg');
     background-size: cover;
 }
 #generalGamePerson >h2{color: white;}
@@ -115,7 +115,7 @@
 
 #bodyGameDetailsPerson 
 {
-    background-image: url('../img/cosmic.jpg');
+    background-image: url('../../img/cosmic.jpg');
     display: grid;
     justify-content: start;
     height: 100vh;

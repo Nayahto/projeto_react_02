@@ -8,17 +8,23 @@ function reqPost(url, data, nav) {
   nav;
 }
 
-function reqGet(url, setData) {
+function reqGet(url, setData, setPendente, setErro, setCadastrado) {
   axios
     .get(url)
     .then((response) => {
       const responseJson = response;
+      setPendente(false);
+      if (responseJson.data.length == 0) {
+        setCadastrado(true);
+      }
       return setData(responseJson.data);
     })
     .catch((error) => {
       console.log(error);
+      return setErro(true), setPendente(false);
     });
 }
+
 function reqPatch(url, sendData) {
   axios
     .patch(url, sendData)
@@ -49,5 +55,36 @@ function reqPostAuth(url, data) {
     })
     .catch((error) => console.log(error));
 }
+function reqGetFav(url, setData, setGameIdGet) {
+  axios
+    .get(url)
+    .then((response) => {
+      const responseJson = response.data;
+      setGameIdGet(true);
+      setData(responseJson.favorite[0].id);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function favorite(url) {
+  axios
+    .get(url)
+    .then((response) => {
+      const responseJson = response.data;
+      console.log(responseJson);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
-export { reqPost, reqGet, reqPatch, reqDelete, reqPostAuth };
+export {
+  reqPost,
+  reqGet,
+  reqPatch,
+  reqDelete,
+  reqPostAuth,
+  reqGetFav,
+  favorite,
+};

@@ -41,7 +41,7 @@ function Login() {
             </button>
 
             <button>
-              <a href="/user/form/">Cadastrar</a>
+              <a href="/user/form">Cadastrar</a>
             </button>
           </div>
         </div>

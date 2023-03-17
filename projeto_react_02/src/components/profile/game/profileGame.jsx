@@ -1,12 +1,15 @@
-import "./game.css";
+import "./profileGame.css";
 import { useState, useEffect } from "react";
-import { reqGet } from "../../functions/axiosFunc";
+import { reqGet } from "../../../functions/axiosFunc";
+import { useParams } from "react-router-dom";
 
-function Game() {
+export default function ProfileGame() {
+  const { id } = useParams();
+  const [cadastrado, setCadastrado] = useState(false);
   const [pendente, setPendente] = useState(true);
   const [erro, setErro] = useState(false);
   const [resData, setResData] = useState([]);
-  const [cadastrado, setCadastrado] = useState(false);
+
   const url = "http://localhost:3001/game";
 
   useEffect(() => {
@@ -19,7 +22,11 @@ function Game() {
       <div id="generalGamePerson">
         <div id="headerPerson">
           <div id="linkPerson">
+            <a href={"/profile/edit/" + id}>editar perfil</a>
             <a href="/user">pagina inicial</a>
+            <a href="/user">genero</a>
+            <a href={"/favorite/form/" + id}>favoritar</a>
+            <a href={"/favorite/" + id}>favoritos</a>
           </div>
           <div id="pesquisaPerson">
             <input type="text" placeholder="pesquisar" />
@@ -51,7 +58,7 @@ function Game() {
                 <p>IMDb: {resDataArg.ImdbScore}</p>
                 <p>Ano: {resDataArg.Year}</p>
                 <button>
-                  <a href={"/game/details/" + resDataArg.id}>ver mais</a>
+                  <a href={"/profile/game/" + resDataArg.id}>ver mais</a>
                 </button>
               </div>
             );
@@ -61,4 +68,3 @@ function Game() {
     </>
   );
 }
-export default Game;

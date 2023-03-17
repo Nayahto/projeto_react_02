@@ -7,10 +7,10 @@ export default function ProfileForm() {
   const [Title, setTitle] = useState("");
   const [ImageURL, setImageURL] = useState("");
   const postBody = { Title, ImageURL };
-  const url = "http://localhost:3002/profile";
+  const url = "http://localhost:3001/profile";
   const nav = useNavigate();
   const navFunc = () => {
-    return nav("/profile");
+    return nav("/user");
   };
 
   return (
